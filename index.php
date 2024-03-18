@@ -1,4 +1,4 @@
-//použito, z kodu pana učitele Pavláta
+<!-- použito, z kodu pana učitele Pavláta -->
 
 <?php
 session_start();

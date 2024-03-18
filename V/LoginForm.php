@@ -10,10 +10,11 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
         }
         .container {
             width: 300px;
@@ -21,6 +22,7 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
         }
         h2 {
             margin-top: 0;
@@ -58,8 +60,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" action="login.php">
-        <h2>Login Form</h2>
+    <h2>Login Form</h2>
         <form action="login.php" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">

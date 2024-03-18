@@ -18,7 +18,7 @@ require_once "./DBC.php";
 
 function Overeni(string $username, string $password):void{
     $connection = DBC::getConnection();
-    $statement = $connection->prepare("SELECT id, username, password FROM User WHERE username = :username LIMIT 1");
+    $statement = $connection->prepare("SELECT id, username, password FROM user WHERE username = :username LIMIT 1");
     $statement->execute([":username" => $username]);
 
     $result = $statement->fetch(PDO::FETCH_ASSOC);

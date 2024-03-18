@@ -7,26 +7,26 @@ $request = $_SERVER['REQUEST_URI'];
 switch ($request) {
     case '':
     case '/':
-        $redirect = '/views/index.php';
+        $redirect = '/V/index.php';
         break;
-    case '/about':
-        $redirect = '/views/aboutUs.php';
+    case '/onas':
+        $redirect = '/V/ONas.php';
         break;
     case '/login':
-        $redirect = '/views/login.php';
+        $redirect = '/V/LoginForm.php';
         break;
     case '/register':
-        $redirect = '/views/register.php';
+        $redirect = '/V/RegisterForm.php';
         break;
-    case '/auth/login':
-        $redirect = '/views/auth/login.php';
+    case '/database/login':
+        $redirect = '/V/database/login.php';
         break;
-    case '/auth/register':
-        $redirect = '/views/auth/register.php';
+    case '/database/register':
+        $redirect = '/V/database/register.php';
         break;
     default:
         http_response_code(404);
-        require __DIR__ . '/views/404.php';
+        require __DIR__ . '/V/404.php';
         exit();
 }
 

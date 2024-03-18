@@ -4,8 +4,8 @@ class DBC
 {
     private const HOST = "localhost:3306";
     private const USER = "root";
-    private const PASSWORD = "1234";
-    private const DATABASE = "LoginTest";
+    private const PASSWORD = "root";
+    private const DATABASE = "user";
 
     private static $connection;
 

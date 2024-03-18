@@ -31,6 +31,6 @@ switch ($request) {
 }
 
 $_SESSION['site'] = $redirect;
-require_once __DIR__ . '/views/core/header.php';
-require_once __DIR__ . $redirect ?? __DIR__ . '/views/index.php';
-require_once __DIR__ . '/views/core/footer.php';
+require_once __DIR__ . '/V/basic/Header.php';
+require_once __DIR__ . $redirect ?? __DIR__ . '/V/index.php';
+require_once __DIR__ . '/V/basic/Footer.php';

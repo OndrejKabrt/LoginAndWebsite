@@ -1,5 +1,3 @@
-
-<body>
     <div class="container">
     <h2>Login Form</h2>
         <form action="/database/login" method="POST">
@@ -11,4 +9,3 @@
         </form>
     </div>
 </body>
-</html>

@@ -22,7 +22,10 @@ switch ($request) {
         $redirect = '\V\RegisterForm.php';
         break;
     case '/blogy':
-        $redirect = '\V\Blogy.php';
+        $redirect = '\V/database\Blogy.php';
+        break;
+    case '/blog':
+        $redirect = '\V\BlogForm.php';
         break;     
     case '/database/login':
         $redirect = '\V\database\login.php';

@@ -1,21 +1,22 @@
 <?php
 include_once 'DBC.php';
 
-if(empty($_POST["text"])){
+
+if(empty($_POST["postText"])){
     $_SESSION["error"] = "Username or Password is empty";
-    header('Location:')
+    header('Location: /blog');
     exit();
 }
 
-if(addPost($_SESSION["username"], $_POST["text"])){
+if(addPost($_SESSION["user_name"],$_POST["postText"] )){
     echo "You have successfully posted post!";
     header('Location: /blogy');
 }else{
     $_SESSION["error"] = "Unexpected error just happened!";
-    header('Location: /blogy');
+    header('Location: /blog');
 }
 
-/**
+        /**
         * @param string $creator
         * @param string $text
         * @return bool

@@ -55,6 +55,23 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+        textarea {
+          width: 100%;
+          height: 200px; /* Adjust height as needed */
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        textarea:focus {
+          outline: none;
+          border-color: #007bff; /* Change border color when focused */
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow when focused */
+        }
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
@@ -74,7 +91,8 @@
       <?php
               if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] === true)
               {
-                echo "<a class='nav-item nav-link' href='#'>Debata</a>";
+                echo "<a class='nav-item nav-link' href='/blogy'>Blog</a>";
+                echo "<a class='nav-item nav-link active' aria-current='page' href='/blog'>New Post</a>";
                 echo "<a class='nav-item nav-link active' aria-current='page' href='/database/logout'>Log out</a>";
               }else
               {

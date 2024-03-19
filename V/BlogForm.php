@@ -2,8 +2,7 @@
     <div class="container">
     <h2>New Post</h2>
         <form action="/database/post" method="POST">
-            <textarea for="postText">Password:</textarea>
-            <input type="text" id="postText" name="postText">
+            <textarea  type="text" id="postText" name="postText" placeholder="Tvoje myšlenka"></textarea>
             <input type="submit" value="Post">
         </form>
     </div>

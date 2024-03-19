@@ -1,18 +1,18 @@
 <?php
-require_once "./DBC.php";
+include_once 'DBC.php';
 
         if (empty($_POST["username"]) || empty($_POST["password"]))
         {
             $_SESSION["error"] = "Username or Password is empty";
-            header('Location: RegisterForm.php');
+            header('Location: /register');
             exit();
         }
         
 
-        if(insertUser($_POST["name"], $_POST["password"])){
+        if(insertUser($_POST["username"], $_POST["password"])){
             echo "You have successfully registeded!";
-            $_SESSION["user"];
-        } else {
+            header('Location: /welcome');
+        }else{
             $_SESSION["error"] = "Unexpected error just happened!";
             header('Location: /register');
         }

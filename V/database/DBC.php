@@ -2,10 +2,10 @@
 
 class DBC
 {
-    private const HOST = "localhost:3306";
+    private const HOST = "127.0.0.1:3306";
     private const USER = "root";
     private const PASSWORD = "root";
-    private const DATABASE = "user";
+    private const DATABASE = "webovkyblog";
 
     private static $connection;
 

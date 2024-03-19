@@ -1,22 +1,25 @@
+
+
+
+
 <?php
-require_once "./DBC.php";
+include_once 'DBC.php';
 
         if (empty($_POST["username"]) || empty($_POST["password"])){
             $_SESSION["error"] = "Username or Password is empty";
             header('Location: LoginForm.php');
             exit();
         }
-        
-        $username = $_POST["username"];
-        $password = $_POST["password"];
+
+        Overeni($_POST["username"],$_POST["password"] );
 
 /**
  * @param string $username
  * @param string $password
  * @return void
  */
-
-function Overeni(string $username, string $password):void{
+function Overeni(string $username, string $password): void
+{
     $connection = DBC::getConnection();
     $statement = $connection->prepare("SELECT id, username, password FROM user WHERE username = :username LIMIT 1");
     $statement->execute([":username" => $username]);
@@ -25,13 +28,15 @@ function Overeni(string $username, string $password):void{
     if ($result && password_verify($password, $result["password"])) {
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_name"] = $result["username"];
-        header("Location: /");
+        header("Location: /"); 
+        $_SESSION["isLoggedIn"] = true;
     } else {
-        $_SESSION["error"] = "Invalid login";
+        $_SESSION["error"] = "Neplatné přihlášení.";
         header("Location: /login");
     }
 
 }
+
 
 
         /*
